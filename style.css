@@ -1,0 +1,398 @@
+/*
+Theme Name: Use Your Brains
+Description: Theme for Wordpress
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Author: Irina Skiba
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F8F8FF;
+    background-image: url(./images/panda4.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.main{
+    width: 970px;   
+    margin: 0 auto;
+}
+
+.header{
+    height: 250px;
+}
+
+.content-main{
+    background: #fafffc;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px 0px #666666;
+}
+
+.menu{
+    font-family: Paint;
+    list-style: none;
+    background: black;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    font-size: 21px;
+    box-shadow: 5px 3px 8px 0px #666666;
+}
+
+.menu li{
+    float: left;
+    padding: 15px 35px;
+    font-weight: 100;
+}
+
+.menu li a{
+    color: #f0088b;
+    text-decoration: none;
+    font-weight: 100;
+
+}
+
+.menu li a:hover{
+    color: #f0088b;
+    text-decoration: underline 10px;
+    color: white;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+    0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.search-main{
+    float: right;
+    margin: 0 25px 0 0;
+}
+
+.search-text{
+    height: 25px;
+    width: 230px;
+    font-size: 17px;
+    border-radius: 3px;
+    position: relative;
+    top: 8px;
+}
+
+.button1{
+    position: relative;
+    top: 8px;
+    width: 65px;
+    height: 31px;
+    background: #f0088b;
+    font-family: Paint;
+    font-size: 17px;
+    margin: 7px 10px 0 0;
+    border-radius: 3px;
+}
+
+.slon{
+    padding: 19px;
+}
+
+.imagepost{
+    border: 1px solid black;
+}
+
+.content{
+    width: 700px;
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+.post-main{
+    background: #fbf3f3;
+    border: 1px solid #cdcdcd;
+    border-radius: 7px;
+    margin: 0 0 20px 0;
+}
+
+.post-main h1{
+    font-family: Paint;
+    font-size: 20px;
+    padding: 5px 20px 8px 15px;
+    margin: 0 0 5px 0;
+    font-weight: 100;
+}
+
+.post-main a{
+    color: #f0088b;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+span{
+    font-family: Baiti;
+    font-size: 15px;
+    color: #888687;
+}
+
+.post{
+    margin: 0 15px 15px 15px;
+}
+
+.post p{
+    font-size: 18px;
+}
+
+.post a{
+    text-decoration: underline;
+}
+
+.post a:hover{
+    text-decoration: none;
+}
+
+.right-menu{
+    font-weight: 100;
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.right{
+    background: black;
+    font-family: Paint;
+    color: white;
+    font-size: 18px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0 20px 0 0;
+    list-style-type: none;
+    width: 210px;
+}
+
+.right h2{
+    font-weight: 100;
+    padding: 0 1px 0 1px;
+}
+
+.right ul{
+    list-style: none;
+    padding: 10px 15px;
+}
+
+.right ul li{
+    padding: 5px;
+}
+
+.right a{
+    color: white;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.right a:hover{
+    color: #f0088b;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+    0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.footer{
+    overflow: hidden;
+    padding: 30px 25px;
+    text-align: center;
+    font-size: 15px;
+    color: #888687;
+    list-style-type: none;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+
+.what{
+    float: right;
+    position: relative;
+    bottom: 1200px;
+}
+
+.nav{
+    font-size: 20px;
+    padding: 0 0 30px 10px;
+    color: #f0088b;  
+}
+
+.nav a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;	
+}
+
+.wp-post-image{
+    float: left;
+    margin: 5px 15px 15px 0;
+    border: 1px solid black;
+}
+
+.alignleft{
+    display: inline;
+    float: left;
+    margin-right: 0.5em;
+    border: 1px solid black;
+    margin: 6px;
+}
+
+.alignright {
+    float: right;
+    margin: 7px 0 28px 28px;
+    border: 1px solid black;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    border: 1px solid black;
+    margin: 7px auto;
+}
+
+.commentlist{
+    margin: 5px 0px 5px 40px;
+    list-style: none;
+    overflow: auto;
+}
+
+.commentlist a{
+    list-style: none;
+    color: gray;
+}
+
+.comment-author{
+    list-style: none;
+}
+
+hr{ 
+    width: 90%;
+    margin: 1em auto;
+    border: none; 
+    height: 1px; 
+    background: #ccc; 
+}
+
+textarea {
+    resize: none; 
+} 
+
+.kisya{
+    border: 1px solid black;
+}
+
+#kis{
+    text-align: center;
+    font-size: 35px;
+    padding: 10px 0px 10px 0px;
+    margin: 0 0 5px 0;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Paint;
+    src: url(./fonts/PaintCans.otf);		
+}
+
+.pagination {
+    clear: both;
+    position: relative;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0px 0px 75px 350px;
+}
+ 
+.pagination span, .pagination a {
+    float: left;
+    margin: 2px 2px 2px 0;
+    padding: 6px 9px 5px 9px;
+    text-decoration: none;
+    width: auto;
+    color: #fff;
+    background: black;
+}
+ 
+.pagination a:hover{
+    color: #fff;
+    background: #f0088b;
+}
+ 
+.pagination .current{
+    padding: 6px 9px 5px 9px;
+    background: #f0088b;
+    color: #fff;
+}
+
+.wp-caption {
+    background: #F1F1F1;
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding: 4px;
+    text-align: center;
+}
+ 
+.wp-caption-text {
+    color: #888;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.sticky{
+    display: none;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+.gallery-caption {
+	color: #707070;
+	color: rgba(51, 51, 51, 0.7);
+	display: block;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	padding: 0.5em 0;
+}
+
+.bypostauthor{
+    top: 7px;
+    left: 6px;
+}
