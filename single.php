@@ -16,7 +16,7 @@
             <?php next_post_link('next article&nbsp;%link'); ?>
 	</div>
             <?php endif; ?>
-						
+             
     </div>
             <?php get_sidebar(); ?>
 </div>
