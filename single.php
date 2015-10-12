@@ -1,10 +1,10 @@
 <?php get_header(); ?>
     <div class="content">
-	<?php if(have_posts() ) : 
-	while(have_posts() ) : the_post(); ?>
-            <div class="post-main">
+	<?php if(have_posts()) : 
+	while(have_posts()) : the_post(); ?>
+            <div <?php post_class('post-main'); ?>>
 		<h1><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
-		<div class="post">
+		<div <?php post_class('post'); ?>>
 		<?php the_content(); ?><hr/>
 		<?php comments_template(); ?>
 		</div>

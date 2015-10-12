@@ -11,9 +11,9 @@
 			<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?> "
 			type="text/css" media="screen" />
 			
-			<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
                         
-			<?php wp_get_archives( 'type monthly&format=link'); ?> 
+			<?php wp_get_archives('type monthly&format=link'); ?> 
 			<?php wp_head(); ?> 
 
 		</head>
@@ -34,10 +34,9 @@
 						<?php wp_list_pages('title_li'); ?>
 						<?php include(TEMPLATEPATH . './searchform.php'); ?>
 					</ul>
-					<!--<div class="slon"><img class="imagepost" src="<?php echo esc_url( get_template_directory_uri() ) ?>/images/slon.png" /></div>-->
-                                            <div class="slon">
+					<div class="slon">
                                                 <img class="imagepost" 
-                                                src="<?php header_image(); ?>" 
+                                                src="<?php echo get_custom_header()->url; ?>" 
                                                 height="<?php echo get_custom_header()->height; ?>" 
                                                 width="<?php echo get_custom_header()->width; ?>" alt="" />
                                             </div>
