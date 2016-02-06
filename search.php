@@ -13,7 +13,7 @@
 	<?php else : ?>
 	<div <?php post_class('post-main'); ?>>
             <div <?php post_class('post'); ?>>
-		<p id="kis">No results found :(<br /><br /><img class="kisya" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/404.jpg" width="400" height="314" /></p>
+		<p id="kis"><?php _e( 'No results found', 'use-your-brains' ); ?><br /><br /><img class="kisya" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/404.jpg" width="400" height="314" /></p>
             </div>
 	</div>
 						

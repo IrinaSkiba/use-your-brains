@@ -1,27 +1,48 @@
 <?php
 function brains_widgets_init() {
     register_sidebar(array( 
-        'name'          => 'Sidebar Area',
+        'name'          => __( 'Sidebar Area', 'use-your-brains' ),
         'id'            => 'sidebar-1',
-        'description'   => 'Appears in the right section of the site.'));
+        'description'   => __( 'Appears in the right section of the site.', 'use-your-brains' ),
+	));
 
-    register_sidebar(array('name' => 'footer'));
+    register_sidebar(array(
+		'name' 			=> __( 'Footer', 'use-your-brains' ),
+		'id'            => 'footer-1',
+		'description'   => __( 'Appears at the bottom of the site.', 'use-your-brains' ),
+	));
 }
 
 function brains_default_init() {
     $args = array(
 	'width'                     => 930,
 	'height'                    => 270,
-	'default-image'             => get_template_directory_uri() . '/images/slon.png',
+	'default-image'             => get_template_directory_uri() . '/images/elephant.png',
 	'uploads'                   => true,
-        'header-text'               => false);
+    'header-text'               => false);
     add_theme_support('custom-header', $args);
 
     $args = array('default-color' => '#F8F8FF');
     add_theme_support('custom-background', $args);
+	
+	add_theme_support('automatic-feed-links');
     
     add_theme_support('post-thumbnails'); //Support of mini img
     set_post_thumbnail_size(166, 124);
+	
+	load_theme_textdomain( 'use-your-brains', get_template_directory() . '/languages' );
+	
+	add_theme_support( 'title-tag' );
+	
+	register_nav_menu( 'primary', __( 'Primary Menu', 'use-your-brains' ) );
+	
+	register_default_headers( array(
+    'wheel' => array(
+        'url'           => '%s/images/elephant.png',
+        'thumbnail_url' => '%s/images/elephant.png',
+        'description'   => __( 'Elephant-Octopus Mural', 'use-your-brains' )
+    )
+) );
 }
 
 function brains_wp_title($title, $sep) {
@@ -40,13 +61,13 @@ function brains_wp_title($title, $sep) {
 	
     // Add a page number if necessary.
     if ($paged >= 2 || $page >= 2)
-    	$title = "$title $sep " . sprintf(__('Page %s', 'useyourbrains'), max($paged, $page));
+    	$title = "$title $sep " . sprintf(__('Page %s', 'use-your-brains'), max($paged, $page));
 	
     return $title;
 }
 
 
-function wp_comments_corenavi() {
+function brains_wp_comments_corenavi() {
     $pages = '';
     $max = get_comment_pages_count();
     $page = get_query_var('cpage');
@@ -66,19 +87,24 @@ function wp_comments_corenavi() {
     if ($max > 1) echo '</div>';
 }
 
-function my_excerpt_length($length) {
+function brains_excerpt_length($length) {
     return 100;
 }
 
 add_action('after_setup_theme', 'brains_default_init');
 add_filter('wp_title', 'brains_wp_title', 10, 2);
 add_action('widgets_init', 'brains_widgets_init');
-add_filter('excerpt_length', 'my_excerpt_length');
-
-add_theme_support('automatic-feed-links');
+add_filter('excerpt_length', 'brains_excerpt_length');
 
 if (!isset($content_width)) $content_width = 700;
-if (is_singular()) wp_enqueue_script("comment-reply");
 
-wp_link_pages();
+function brain_scripts() {
+	wp_enqueue_style( 'brain-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'brain-font', 'http://fonts.googleapis.com/css?family=Kelly+Slab&subset=latin,cyrillic'); 
+	
+	if (is_singular()) wp_enqueue_script("comment-reply");
+}
+add_action( 'wp_enqueue_scripts', 'brain_scripts' );
+
+
 ?>

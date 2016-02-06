@@ -8,7 +8,7 @@
     comment_form( $args );
     
     wp_list_comments();
-    if(function_exists('wp_comments_corenavi')) {
-        wp_comments_corenavi(); 
+    if(function_exists('brains_wp_comments_corenavi')) {
+        brains_wp_comments_corenavi(); 
     }//pagination
 ?>

@@ -1,12 +1,13 @@
 /*
 Theme Name: Use Your Brains
 Description: Emotional theme for Wordpress
-Version: 1.0
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Author: Irina Skiba
 Author URI: https://github.com/IrinaSkiba/use-your-brains
 Tags: pink, one-column, black, right-sidebar, custom-header, light
+Text Domain: use-your-brains
 */
 
 *{
@@ -16,7 +17,7 @@ Tags: pink, one-column, black, right-sidebar, custom-header, light
 
 body {
     background-color: #F8F8FF;
-    background-image: url(./images/panda4.jpg);
+    background-image: url(./images/header.jpg);
     background-repeat: no-repeat;
     background-position: top center;
 }
@@ -38,26 +39,27 @@ body {
 }
 
 .menu{
-    font-family: Paint;
+    font-family: 'Kelly Slab';
     list-style: none;
     background: black;
     overflow: hidden;
     border-radius: 15px 15px 0 0;
-    font-size: 21px;
+    font-size: 25px;
+	font-weight: 900;
     box-shadow: 5px 3px 8px 0px #666666;
 }
 
 .menu li{
     float: left;
     padding: 15px 35px;
-    font-weight: 100;
+    font-weight: 900;
+	margin-top: 1.5px;
 }
 
 .menu li a{
     color: #f0088b;
     text-decoration: none;
-    font-weight: 100;
-
+    font-weight: bold;
 }
 
 .menu li a:hover{
@@ -70,31 +72,32 @@ body {
 
 .search-main{
     float: right;
-    margin: 0 25px 0 0;
+	padding: 0 25px 25px 0;
 }
 
 .search-text{
     height: 25px;
-    width: 230px;
+    width: 200px;
     font-size: 17px;
     border-radius: 3px;
     position: relative;
-    top: 8px;
+    top: 3.5px;
 }
 
 .button1{
     position: relative;
-    top: 8px;
     width: 65px;
-    height: 31px;
+	height: 30px;
     background: #f0088b;
-    font-family: Paint;
-    font-size: 17px;
-    margin: 7px 10px 0 0;
+    font-family: 'Kelly Slab';
+    font-size: 18px;
+    margin: 15px 10px 0 0;
     border-radius: 3px;
+	font-weight: bold;
+	top: 3.5px;
 }
 
-.slon{
+.elephant{
     padding: 19px;
 }
 
@@ -116,8 +119,8 @@ body {
 }
 
 .post-main h1{
-    font-family: Paint;
-    font-size: 20px;
+    font-family: 'Kelly Slab';
+    font-size: 30px;
     padding: 5px 20px 8px 15px;
     margin: 0 0 5px 0;
     font-weight: 100;
@@ -137,6 +140,7 @@ span{
 
 .post{
     margin: 0 15px 15px 15px;
+	min-height: 130px;
 }
 
 .post p{
@@ -159,7 +163,7 @@ span{
 
 .right{
     background: black;
-    font-family: Paint;
+    font-family: 'Kelly Slab';
     color: white;
     font-size: 18px;
     border-radius: 7px;
@@ -173,6 +177,7 @@ span{
 .right h2{
     font-weight: 100;
     padding: 0 1px 0 1px;
+	font-family: 'Kelly Slab';
 }
 
 .right ul{
@@ -200,15 +205,10 @@ span{
     overflow: hidden;
     padding: 30px 25px;
     text-align: center;
-    font-size: 15px;
-    color: #888687;
+    font-size: 16px;
+    color: black;
     list-style-type: none;
-    background-color: #666666;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+	font-family: 'Kelly Slab';
 }
 
 .what{
@@ -221,20 +221,17 @@ span{
     font-size: 20px;
     padding: 0 0 30px 10px;
     color: #f0088b;  
+	font-family: 'Kelly Slab';
 }
 
 .nav a{
     color: black;
     text-decoration: none;
+	font-family: 'Kelly Slab';
 }
 
 .nav a:hover{
-    background-color: #666666;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;	
+    color: gray;
 }
 
 .wp-post-image{
@@ -301,11 +298,6 @@ textarea {
     padding: 10px 0px 10px 0px;
     margin: 0 0 5px 0;
     font-weight: 100;
-}
-
-@font-face {
-    font-family: Paint;
-    src: url(./fonts/PaintCans.otf);		
 }
 
 .pagination {

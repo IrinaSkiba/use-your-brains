@@ -1,6 +1,7 @@
 <div class="footer">
-    <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer')) : ?>
-    <?php endif; ?>
+    <?php 	if ( is_active_sidebar( 'footer-1' ) ) {
+				dynamic_sidebar('footer-1');
+			} ?>
 </div>
                                  
 </div>
