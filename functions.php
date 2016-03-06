@@ -106,5 +106,27 @@ function brain_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'brain_scripts' );
 
+function brain_customize_register( $wp_customize ) {
+	$wp_customize->add_section('brain_section_image', array(
+		'title' => __( 'Additional header image', 'use-your-brains' ), 
+		'priority' => 70
+		)
+	);
 
+	$wp_customize->add_setting( 'brain_header_image' , array(
+        'default' => get_template_directory_uri() . '/images/header.jpg', //The path to the default image. Remove this if you don't want a default.
+        'sanitize_callback' => 'esc_url' //the image control uses links, make sure the link is safe.
+    ) );
+	
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'brain_header_image', array(
+               'label'      => __( 'Upload an image', 'use-your-brains' ),  //You can change this text to anything you want.
+               'section'    => 'brain_section_image',
+               'settings'   => 'brain_header_image', //Must be the name that you used in your setting above.
+
+           )
+       )
+   );
+
+}
+add_action( 'customize_register', 'brain_customize_register' );
 ?>

@@ -1,13 +1,15 @@
 /*
 Theme Name: Use Your Brains
 Description: Emotional theme for Wordpress
-Version: 1.1
+Version: 1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Author: Irina Skiba
 Author URI: https://github.com/IrinaSkiba/use-your-brains
 Tags: pink, one-column, black, right-sidebar, custom-header, light
 Text Domain: use-your-brains
+Use Your Brains WordPress Theme, Copyright 2016 Irina Skiba
+Use Your Brains is distributed under the terms of the GNU GPL
 */
 
 *{
@@ -17,7 +19,6 @@ Text Domain: use-your-brains
 
 body {
     background-color: #F8F8FF;
-    background-image: url(./images/header.jpg);
     background-repeat: no-repeat;
     background-position: top center;
 }
@@ -51,7 +52,7 @@ body {
 
 .menu li{
     float: left;
-    padding: 15px 35px;
+    padding: 15px 20px;
     font-weight: 900;
 	margin-top: 1.5px;
 }
@@ -140,7 +141,7 @@ span{
 
 .post{
     margin: 0 15px 15px 15px;
-	min-height: 130px;
+	min-height: 150px;
 }
 
 .post p{
@@ -288,7 +289,7 @@ textarea {
     resize: none; 
 } 
 
-.kisya{
+.kitty{
     border: 1px solid black;
 }
 
@@ -390,3 +391,15 @@ textarea {
 .comment .children {
     padding-left: 7%;
 } 
+
+li a{
+    color: black;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: #f0088b;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+    0px -5px 35px rgba(255,255,255,0.3);
+}
